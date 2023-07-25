@@ -31,13 +31,13 @@ class _HomePageState extends State<HomePage> {
             TextButton(
               child: const Text('Cancel'),
               onPressed: () {
-                Navigator.of(context).pop(); // Close the dialog
+                Navigator.of(context).pop();
               },
             ),
             TextButton(
               child: const Text('Yes'),
               onPressed: () {
-                Navigator.of(context).pop(); // Close the dialog
+                Navigator.of(context).pop();
                 addToCart(product);
               },
             ),
@@ -59,17 +59,15 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: const Color(0xFFEA3A60),
       ),
       body: Column(
-        // Wrap the entire body in a Column
         children: [
           const Padding(
             padding: EdgeInsets.all(16.0),
             child: Text(
-              'Fake Store', // Add a title under the AppBar
+              'Fake Store',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ),
           Expanded(
-            // Use Expanded to allow the GridView to take available space
             child: Consumer<ProductProvider>(
               builder: (context, productProvider, _) {
                 final products = productProvider.products;
@@ -82,7 +80,6 @@ class _HomePageState extends State<HomePage> {
                   itemCount: products.length,
                   itemBuilder: (context, index) {
                     final product = products[index];
-                    // print(product);
                     return GestureDetector(
                       onTap: () {
                         Navigator.push(

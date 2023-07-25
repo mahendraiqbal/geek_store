@@ -23,7 +23,7 @@ class CartPage extends StatelessWidget {
               final cartItem = cartItems[index];
               return ListTile(
                 leading: Image.network(
-                  cartItem.product.imageUrl, // Image of the product
+                  cartItem.product.imageUrl,
                   width: 50,
                   height: 50,
                 ),

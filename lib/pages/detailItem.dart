@@ -21,13 +21,13 @@ class ProductDetailScreen extends StatelessWidget {
             TextButton(
               child: const Text('Cancel'),
               onPressed: () {
-                Navigator.of(context).pop(); // Close the dialog
+                Navigator.of(context).pop();
               },
             ),
             TextButton(
               child: const Text('Yes'),
               onPressed: () {
-                Navigator.of(context).pop(); // Close the dialog
+                Navigator.of(context).pop();
                 addToCart(context, product);
               },
             ),
@@ -50,7 +50,7 @@ class ProductDetailScreen extends StatelessWidget {
       ),
       body: Center(
         child: Card(
-          margin: EdgeInsets.all(16.0),
+          margin: const EdgeInsets.all(16.0),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Stack(
@@ -87,11 +87,10 @@ class ProductDetailScreen extends StatelessWidget {
                   ],
                 ),
                 Positioned(
-                  bottom: 3, // Adjust the value to control the stand-up effect
-                  right: 3, // Adjust the value to control the stand-up effect
+                  bottom: 3,
+                  right: 3,
                   child: Card(
-                    elevation:
-                        4, // Adjust the elevation to control the stand-up effect
+                    elevation: 4,
                     shape: const CircleBorder(),
                     child: IconButton(
                       icon: const Icon(Icons.add_shopping_cart),
