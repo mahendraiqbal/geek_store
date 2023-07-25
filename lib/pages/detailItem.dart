@@ -19,13 +19,19 @@ class ProductDetailScreen extends StatelessWidget {
               'Are you sure you want to add this product to the cart?'),
           actions: <Widget>[
             TextButton(
-              child: const Text('Cancel'),
+              child: const Text(
+                'Cancel',
+                style: TextStyle(color: Colors.pink),
+              ),
               onPressed: () {
                 Navigator.of(context).pop();
               },
             ),
             TextButton(
-              child: const Text('Yes'),
+              child: const Text(
+                'Yes',
+                style: TextStyle(color: Colors.pink),
+              ),
               onPressed: () {
                 Navigator.of(context).pop();
                 addToCart(context, product);
